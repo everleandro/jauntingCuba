@@ -9,8 +9,13 @@
 //
 // export default axios.create(options)
 export default function({ $axios, redirect }) {
-  $axios.onRequest(() => {})
-
+  $axios.onRequest(() => {
+    console.log($axios.defaults.baseURL)
+  })
+  if (process.server) {
+    $axios.defaults.baseURL = `http://${process.env.HOST || '0.0.0.0'}:${process
+      .env.PORT || 3000}`
+  }
   $axios.onError((error) => {
     const code = parseInt(error.response && error.response.status)
     if (code === 400) {
