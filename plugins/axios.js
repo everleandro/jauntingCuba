@@ -1,3 +1,5 @@
+import * as axios from 'axios'
+
 const options = {}
 // The server-side needs a full url to work
 if (process.server) {
@@ -5,13 +7,4 @@ if (process.server) {
     .PORT || 3000}`
 }
 
-export default function({ $axios }) {
-  $axios.interceptors.request.use(
-    (config) => {
-      config.baseURL = `http://${process.env.HOST || 'localhost'}:${process.env
-        .PORT || 3000}`
-      return config
-    },
-    (error) => Promise.reject(error)
-  )
-}
+export default axios.create(options)

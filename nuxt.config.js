@@ -37,7 +37,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/v-switch-case', '~/plugins/vue-conf', '~/plugins/axios'],
+  plugins: ['~/plugins/v-switch-case', '~/plugins/vue-conf'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -52,12 +52,8 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/pwa',
-    '@nuxtjs/axios',
     'nuxt-i18n'
   ],
-  axios: {
-    baseURL: process.env.API_URL || 'http://localhost:3000'
-  },
   /*
    ** i18n module configuration
    ** See https://nuxt-community.github.io/nuxt-i18n/
@@ -106,6 +102,7 @@ export default {
    ** Build configuration
    */
   build: {
+    vendor: ['axios'],
     /*
      ** You can extend webpack config here
      */

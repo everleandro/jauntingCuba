@@ -1,3 +1,4 @@
+import axios from '~/plugins/axios'
 export const state = () => ({
   emailProvider: {
     service: 'gmail',
@@ -12,7 +13,7 @@ export const actions = {
     const emailProvider = state.emailProvider
     if (emailProvider.username !== '' && emailProvider.password !== '') {
       try {
-        return this.$axios
+        return axios
           .post('/api/nodemailer', {
             emailInfo,
             emailProvider
