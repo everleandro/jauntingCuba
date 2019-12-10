@@ -30,7 +30,7 @@ const sendMail = (emailInfo, emailProvider, response) => {
       name: `Message from ${emailInfo.name}`,
       html: `${emailInfo.message}`
     },
-    function(err, info) {
+    function(err) {
       if (err) response.status(200).json({ message: 'error' })
       else response.status(200).json({ message: 'success' })
     }

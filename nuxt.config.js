@@ -41,7 +41,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/v-switch-case', '~/plugins/vue-conf', '~/plugins/axios'],
+  plugins: ['~/plugins/v-switch-case', '~/plugins/vue-conf'],
   /*
    ** Nuxt.js dev-modules
    */
