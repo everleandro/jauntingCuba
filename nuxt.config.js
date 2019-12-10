@@ -18,6 +18,7 @@ export default {
       }
     ],
     link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         href: 'https://fonts.googleapis.com/css?family=Nunito&display=swap',
         rel: 'stylesheet'
