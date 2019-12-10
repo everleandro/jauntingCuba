@@ -3,8 +3,10 @@ import * as axios from 'axios'
 const options = {}
 // The server-side needs a full url to work
 if (process.server) {
+  console.log(process)
   options.baseURL = `http://${process.env.HOST || 'localhost'}:${process.env
     .PORT || 3000}`
+  console.log(options.baseURL)
 }
 
 export default axios.create(options)
