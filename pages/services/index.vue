@@ -61,7 +61,7 @@
 
 <script>
 // component
-import Services from '@/components/services/services'
+import Services from '@/components/services/Services'
 
 // data
 import ServiceData from '@/data/services.js'
