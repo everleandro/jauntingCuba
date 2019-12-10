@@ -28,13 +28,6 @@ export default {
     port: 8000, // default: 3000
     host: '0.0.0.0' // default: localhost
   },
-  env: {
-    EMAIL_PROVIDER: {
-      service: 'gmail',
-      username: 'ever.leandros91@gmail.com',
-      password: 'N0ladar3+-+*'
-    }
-  },
   serverMiddleware: ['~/api/nodemailer'],
   /*
    ** Customize the progress-bar color
