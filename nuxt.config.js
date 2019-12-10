@@ -25,10 +25,6 @@ export default {
       }
     ]
   },
-  server: {
-    port: 8000, // default: 3000
-    host: '0.0.0.0' // default: localhost
-  },
   serverMiddleware: ['~/api/nodemailer'],
   /*
    ** Customize the progress-bar color
@@ -107,7 +103,6 @@ export default {
    ** Build configuration
    */
   build: {
-    vendor: ['axios'],
     /*
      ** You can extend webpack config here
      */

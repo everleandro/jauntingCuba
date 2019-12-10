@@ -1,4 +1,4 @@
-import axios from '~/plugins/axios'
+import axios from '@nuxtjs/axios'
 export const state = () => ({
   emailProvider: {
     service: 'gmail',
