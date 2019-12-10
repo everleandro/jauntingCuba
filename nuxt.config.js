@@ -37,7 +37,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/v-switch-case', '~/plugins/vue-conf'],
+  plugins: ['~/plugins/v-switch-case', '~/plugins/vue-conf', '~/plugins/axios'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -52,6 +52,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/pwa',
+    '@nuxtjs/axios',
     'nuxt-i18n'
   ],
 

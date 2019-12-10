@@ -1,4 +1,3 @@
-import axios from '@nuxtjs/axios'
 export const state = () => ({
   emailProvider: {
     service: 'gmail',
@@ -13,7 +12,7 @@ export const actions = {
     const emailProvider = state.emailProvider
     if (emailProvider.username !== '' && emailProvider.password !== '') {
       try {
-        return axios
+        return this.$axios
           .post('/api/nodemailer', {
             emailInfo,
             emailProvider
