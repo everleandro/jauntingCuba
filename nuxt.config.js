@@ -55,7 +55,9 @@ export default {
     '@nuxtjs/axios',
     'nuxt-i18n'
   ],
-
+  axios: {
+    baseURL: process.env.API_URL || 'http://localhost:3000'
+  },
   /*
    ** i18n module configuration
    ** See https://nuxt-community.github.io/nuxt-i18n/

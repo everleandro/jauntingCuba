@@ -12,10 +12,6 @@ export default function({ $axios, redirect }) {
   $axios.onRequest(() => {
     console.log($axios.defaults.baseURL)
   })
-
-  $axios.defaults.baseURL = `http://${process.env.HOST || 'localhost'}:${process
-    .env.PORT || 3000}`
-  console.log($axios.defaults.baseURL)
   $axios.onError((error) => {
     const code = parseInt(error.response && error.response.status)
     if (code === 400) {
