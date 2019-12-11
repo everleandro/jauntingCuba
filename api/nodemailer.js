@@ -31,8 +31,6 @@ const sendMail = (emailInfo, emailProvider, response) => {
       html: `${emailInfo.message}`
     },
     function(err) {
-      console.log('err')
-      console.log(err)
       if (err) response.status(200).json({ message: 'error' })
       else response.status(200).json({ message: 'success' })
     }

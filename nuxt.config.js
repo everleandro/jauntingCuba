@@ -43,6 +43,7 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
+    '@nuxtjs/axios',
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify'
   ],
@@ -102,7 +103,7 @@ export default {
    ** Build configuration
    */
   build: {
-    vendor: ['axios'],
+    // vendor: ['@nuxtjs/axios'],
     /*
      ** You can extend webpack config here
      */
