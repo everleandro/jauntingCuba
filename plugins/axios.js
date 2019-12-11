@@ -5,7 +5,6 @@ const options = {}
 if (process.server) {
   options.baseURL = `http://${process.env.HOST || 'localhost'}:${process.env
     .PORT || 3000}`
-  console.log(options.baseURL)
 }
 
 export default axios.create(options)
