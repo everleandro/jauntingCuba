@@ -56,7 +56,7 @@ export default {
     'nuxt-i18n'
   ],
   axios: {
-    baseURL: `http://jaunting-cuba.herokuapp.com:${process.env.PORT || 3000}`
+    baseURL: 'http://jaunting-cuba.herokuapp.com'
   },
   /*
    ** i18n module configuration
