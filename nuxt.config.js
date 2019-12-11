@@ -55,6 +55,10 @@ export default {
     '@nuxtjs/pwa',
     'nuxt-i18n'
   ],
+  axios: {
+    baseURL: `http://${process.env.HOST || 'localhost'}:${process.env.PORT ||
+      3000}`
+  },
   /*
    ** i18n module configuration
    ** See https://nuxt-community.github.io/nuxt-i18n/
