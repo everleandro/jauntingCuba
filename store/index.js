@@ -1,8 +1,8 @@
 export const state = () => ({
   emailProvider: {
     service: 'gmail',
-    username: 'ever.leandros91@gmail.com',
-    password: 'N0ladar3+-+*'
+    username: 'jauntingcuba@gmail.com',
+    password: 'Future2020'
   }
 })
 
