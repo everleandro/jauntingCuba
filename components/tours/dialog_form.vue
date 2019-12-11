@@ -227,7 +227,7 @@ export default {
       }
     },
     bodyText() {
-      return `<p><b>${this.name}</b> se ha interesado por el tour <b>${this.tour}</b></p></br><p>Fecha del tour: <b>${this.date}</b></p></br> <p>email: <b>${this.email}</b></p> </br> <p>Cantidad de personas: <b>${this.amount}</b></p> </br> <h4>Message: </h4><p>${this.sub_action}</p> `
+      return `<p><b>${this.name}</b> se ha interesado por el tour <b>${this.tour}</b></p></br><p>Fecha del tour: <b>${this.date}</b></p></br> <p>email: <b>${this.email}</b></p> </br> <p>Cantidad de personas: <b>${this.amount}</b></p> </br> <h4>Message: </h4><p>${this.text}</p> `
     }
   }
 }

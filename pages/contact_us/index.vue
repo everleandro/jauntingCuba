@@ -137,7 +137,7 @@ export default {
       }
     },
     bodyText() {
-      return `<p><b>${this.name}</b> se ha comunicado a travez de "CONTACT US"</p> <p>email: <b>${this.email}</b></p><p><b>Mensaje:</b></p><p> ${this.sub_action}</p>`
+      return `<p><b>${this.name}</b> se ha comunicado a travez de "CONTACT US"</p> <p>email: <b>${this.email}</b></p><p><b>Mensaje:</b></p><p> ${this.text}</p>`
     }
   }
 }
