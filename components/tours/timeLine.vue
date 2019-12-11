@@ -1,26 +1,19 @@
 <template>
-  <v-flex class="md10 offset-md-1">
-    <v-timeline class="mx-auto pa-3" dense>
-      <v-timeline-item
-        v-for="(item, index) in list"
-        :key="index"
-        color="light-blue lighten-2"
-        small
-      >
-        <v-card class="pb-3">
-          <v-card-title>
-            {{ item.action }}
-          </v-card-title>
+  <v-flex class="md10 offset-md-1 pb-12 pt-6">
+    <v-expansion-panels accordion focusable>
+      <v-expansion-panel v-for="(item, index) in list" :key="index">
+        <v-expansion-panel-header>{{ item.action }}</v-expansion-panel-header>
+        <v-expansion-panel-content>
           <v-card-text
             v-for="(description, key) in item.sub_action"
             :key="key"
-            class="pb-0 pl-9"
+            class="pb-0"
           >
             {{ description }}
           </v-card-text>
-        </v-card>
-      </v-timeline-item>
-    </v-timeline>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </v-expansion-panels>
   </v-flex>
 </template>
 

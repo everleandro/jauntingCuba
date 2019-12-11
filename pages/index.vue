@@ -72,7 +72,7 @@
     </v-container>
 
     <!--TRENDY TOURS-->
-    <v-container id="recent-post" fluid class="my-12">
+    <v-container id="recent-post" fluid class="my-12 px-0">
       <v-row justify="center" align="center" class="mb-8 mx-0">
         <v-card tile flat color="transparent">
           <v-card-title

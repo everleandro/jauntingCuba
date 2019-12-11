@@ -40,41 +40,8 @@
 </template>
 
 <script>
-import { validationMixin } from 'vuelidate'
-import { required } from 'vuelidate/lib/validators'
-
 export default {
-  name: 'Index',
-  mixins: [validationMixin],
-
-  validations: {
-    sub_action: { required },
-    name: { required }
-  },
-  data: () => ({
-    sub_action: '',
-    name: '',
-    valid: true
-  }),
-  computed: {
-    subjectErrors() {
-      const errors = []
-      if (!this.$v.name.$dirty) return errors
-      !this.$v.name.required && errors.push('Subject is required.')
-      return errors
-    },
-    textErrors() {
-      const errors = []
-      if (!this.$v.sub_action.$dirty) return errors
-      !this.$v.sub_action.required && errors.push('Message is required.')
-      return errors
-    }
-  },
-  methods: {
-    validate() {
-      this.$v.$touch()
-    }
-  }
+  name: 'Index'
 }
 </script>
 <style scoped>

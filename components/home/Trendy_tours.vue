@@ -1,6 +1,6 @@
 <template>
   <v-layout wrap justify-center>
-    <v-flex v-for="item in list" :key="item.id" xs10 md4>
+    <v-flex v-for="item in list" :key="item.id" xs12 md6 lg4>
       <v-card class="ma-3" flat outlined>
         <v-img height="250" :src="item.imgUrl"></v-img>
 

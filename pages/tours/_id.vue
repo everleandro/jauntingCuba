@@ -39,17 +39,19 @@
               :src="tour.imgUrl"
               class="md-10 br-5"
               :class="{ shadow: $vuetify.breakpoint.mdAndUp }"
-              :aspect-ratio="$vuetify.breakpoint.mdAndUp ? '1.333' : '3'"
+              :aspect-ratio="$vuetify.breakpoint.mdAndUp ? '1.333' : '2'"
               @click="dialog_img = true"
             ></v-img>
           </v-flex>
         </v-col>
-        <v-col cols="10" md="5">
+        <v-col cols="12" md="5">
           <v-card tile flat class="transparent">
-            <v-card-title class="blue--text text-uppercase display-1">
+            <v-card-title
+              class="blue--text d-block text-center text-md-left text-uppercase display-1"
+            >
               {{ tour.title }}
             </v-card-title>
-            <v-card-text class="text-sm-justify">
+            <v-card-text class="text-justify">
               {{ tour.description }}
             </v-card-text>
             <v-card-actions>

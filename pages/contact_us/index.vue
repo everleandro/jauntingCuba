@@ -56,12 +56,6 @@
         </v-col>
       </v-row>
     </v-layout>
-    <v-snackbar v-model="showSnackbar" top :color="snackbarOptions.color">
-      {{ snackbarOptions.message }}
-      <v-btn text @click="showSnackbar = false">
-        Close
-      </v-btn>
-    </v-snackbar>
   </v-content>
 </template>
 
@@ -83,11 +77,6 @@ export default {
     name: '',
     email: '',
     sending: false,
-    showSnackbar: false,
-    snackbarOptions: {
-      message: '',
-      color: 'info'
-    },
     showMessage: false,
     valid: true
   }),
@@ -121,7 +110,7 @@ export default {
           message: this.bodyText(),
           name: this.name
         }
-        this.snackbarOptions = await this.$store.dispatch(
+        const snackbarOptions = await this.$store.dispatch(
           'sendEmail',
           emailData
         )
@@ -130,7 +119,7 @@ export default {
         this.text = ''
         this.name = ''
         this.$v.$reset()
-        this.showSnackbar = true
+        this.$flash(snackbarOptions)
         this.sending = false
       } else {
         this.$v.$touch()

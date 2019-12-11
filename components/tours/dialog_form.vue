@@ -120,12 +120,6 @@
           </v-btn>
         </v-card-actions>
       </v-card>
-      <v-snackbar v-model="showSnackbar" top :color="snackbarOptions.color">
-        {{ snackbarOptions.message }}
-        <v-btn text @click="showSnackbar = false">
-          Close
-        </v-btn>
-      </v-snackbar>
     </v-dialog>
   </v-row>
 </template>
@@ -210,7 +204,7 @@ export default {
           message: this.bodyText(),
           name: this.name
         }
-        this.snackbarOptions = await this.$store.dispatch(
+        const snackbarOptions = await this.$store.dispatch(
           'sendEmail',
           emailData
         )
@@ -219,7 +213,8 @@ export default {
         this.text = ''
         this.name = ''
         this.$v.$reset()
-        this.showSnackbar = true
+        this.$flash(snackbarOptions)
+        this.$emit('update:dialog', false)
         this.sending = false
         // this.$emit('update:dialog', false)
       } else {

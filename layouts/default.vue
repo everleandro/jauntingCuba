@@ -1,5 +1,6 @@
 <template>
   <v-app id="app" v-scroll="onScroll">
+    <Snackbar />
     <appBar :transparent="transparent" />
     <nuxt />
     <v-btn
@@ -18,10 +19,11 @@
 </template>
 
 <script>
-import appBar from '../components/layouts/appBar'
-import Footer from '../components/layouts/footer'
+import appBar from '~/components/layouts/appBar'
+import Footer from '~/components/layouts/footer'
+import Snackbar from '~/components/global/snackbar'
 export default {
-  components: { appBar, Footer },
+  components: { appBar, Footer, Snackbar },
   data() {
     return {
       transparent: false,
