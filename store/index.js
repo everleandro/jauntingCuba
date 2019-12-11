@@ -8,12 +8,12 @@ export const state = () => ({
 })
 
 export const actions = {
-  sendEmail({ state, commit }, payload) {
+  async sendEmail({ state, commit }, payload) {
     const emailInfo = payload
     const emailProvider = state.emailProvider
     if (emailProvider.username !== '' && emailProvider.password !== '') {
       try {
-        return axios
+        return await axios
           .post('/api/nodemailer', {
             emailInfo,
             emailProvider
