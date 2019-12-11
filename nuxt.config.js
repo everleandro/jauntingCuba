@@ -46,6 +46,10 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify'
   ],
+  server: {
+    port: 3000, // default: 3000
+    host: '0.0.0.0' // default: localhost
+  },
   /*
    ** Nuxt.js modules
    */
@@ -55,7 +59,7 @@ export default {
     'nuxt-i18n'
   ],
   axios: {
-    baseURL: 'http://jaunting-cuba.herokuapp.com'
+    // baseURL: 'http://jaunting-cuba.herokuapp.com'
   },
   /*
    ** i18n module configuration
