@@ -48,7 +48,7 @@
     <v-container class="mb-8" fluid>
       <v-flex class="sm8 xs11 md6 mx-auto text-justify">
         <v-card color="transparent" class="mb-10" flat>
-          <v-card-title class="d-block text-center display-1">
+          <v-card-title class="d-block text-center blue--text display-1">
             Tours
           </v-card-title>
         </v-card>

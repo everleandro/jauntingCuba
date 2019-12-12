@@ -94,7 +94,7 @@ import Service from '@/components/home/Service'
 
 // data
 import HighLight from '@/data/highlight.js'
-import TrendyTour from '@/data/trendy_tours.js'
+import Tours from '@/data/tours.js'
 import HomeData from '@/data/home.js'
 import ServiceData from '@/data/services.js'
 
@@ -133,7 +133,7 @@ export default {
     getData(locale) {
       this.HighLight = HighLight.getHighLight(locale)
       this.higLightSubtitle = HighLight.getSubtitle(locale)
-      this.trendy_ours = TrendyTour.bestOffers(locale)
+      this.trendy_ours = Tours.getTrendy(locale)
       this.HomeData = HomeData.getHeaderInfo(locale)
       this.services = ServiceData.getServices(locale)
     }

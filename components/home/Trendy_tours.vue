@@ -3,15 +3,11 @@
     <v-flex v-for="item in list" :key="item.id" xs12 md6 lg4>
       <v-card class="ma-3" flat outlined>
         <v-img height="250" :src="item.imgUrl"></v-img>
-
-        <div
-          :style="
-            $vuetify.breakpoint.smAndDown
-              ? 'height: auto'
-              : 'height: 294px;overflow: hidden;'
-          "
-        >
-          <v-card-title class="align-start ">{{ item.title }}</v-card-title>
+        <div>
+          <v-card-title class="align-start blue--text">{{
+            item.title
+          }}</v-card-title>
+          <v-card-subtitle>{{ item.subtitle }}</v-card-subtitle>
 
           <v-divider class="mx-4"></v-divider>
 

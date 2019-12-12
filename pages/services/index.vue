@@ -50,7 +50,7 @@
 
     <v-layout class="justify-center">
       <v-card color="transparent" class="mb-10" flat>
-        <v-card-title class="d-block text-center display-1">
+        <v-card-title class="d-block text-center display-1 blue--text">
           All our services
         </v-card-title>
       </v-card>

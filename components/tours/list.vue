@@ -1,7 +1,7 @@
 <template>
   <v-layout fluid row wrap class="mx-0" justify-space-around align-stretch>
     <v-flex v-for="item in list" :key="item.id" lg10 md12>
-      <v-card class="my-4 mx-2" tile flat outlined>
+      <v-card class="my-4 mx-2 pa-2" tile>
         <v-row no-gutters wrap class="mx-0">
           <v-col md="4" cols="12" class="mx-0 d-flex">
             <v-img
@@ -15,7 +15,7 @@
             class="d-flex xs-12 flex-column justify-space-between"
           >
             <div>
-              <v-card-title>
+              <v-card-title class="blue--text">
                 {{ item.title }}
               </v-card-title>
               <v-card-subtitle color="blue-grey lighten-5">

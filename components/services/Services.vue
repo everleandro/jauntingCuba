@@ -13,7 +13,9 @@
             }"
           >
             <v-col md="5" cols="7">
-              <v-img :src="item.image"></v-img>
+              <v-card>
+                <v-img :src="item.image"></v-img>
+              </v-card>
             </v-col>
             <v-col md="7" lg="5" sm="10" cols="12">
               <v-card-text class="header-card">
