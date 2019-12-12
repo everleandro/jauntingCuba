@@ -12,14 +12,14 @@
               'flex-row-reverse': $vuetify.breakpoint.mdAndUp && index % 2 === 1
             }"
           >
-            <v-col md="5" cols="7">
-              <v-card>
+            <v-col md="5" sm="9" cols="11">
+              <v-card class="pa-2">
                 <v-img :src="item.image"></v-img>
               </v-card>
             </v-col>
             <v-col md="7" lg="5" sm="10" cols="12">
               <v-card-text class="header-card">
-                <p class="display-1 mb-5 text-center text-md-left">
+                <p class="display-1 mb-5 text-center text-md-left blue--text">
                   {{ item.title }}
                 </p>
                 <p

@@ -49,7 +49,7 @@
           :key="btn.sub_action"
           nuxt
           :to="localePath(btn.to)"
-          exact
+          :exact="btn.exact"
           text
         >
           {{ $t(btn.sub_action) }}
@@ -78,14 +78,25 @@ export default {
       lang: 'en',
       drawer: false,
       link_button: [
-        { sub_action: 'home', icon: 'mdi-home', to: 'index' },
-        { sub_action: 'services', icon: 'mdi-face-agent', to: 'services' },
-        { sub_action: 'tours', icon: 'mdi-walk', to: 'tours' },
-        { sub_action: 'about_us', icon: 'mdi-account-group', to: 'about_us' },
+        { sub_action: 'home', icon: 'mdi-home', to: 'index', exact: true },
+        {
+          sub_action: 'services',
+          icon: 'mdi-face-agent',
+          to: 'services',
+          exact: true
+        },
+        { sub_action: 'tours', icon: 'mdi-walk', to: 'tours', exact: false },
+        {
+          sub_action: 'about_us',
+          icon: 'mdi-account-group',
+          to: 'about_us',
+          exact: true
+        },
         {
           sub_action: 'contact_us',
           icon: 'mdi-mailbox-open-up-outline',
-          to: 'contact_us'
+          to: 'contact_us',
+          exact: true
         }
       ]
     }
