@@ -551,7 +551,6 @@ export default {
   getTourSummary(locale) {
     return this.tours.summary[locale]
   },
-
   tourById(id, locale) {
     if (this.offerHashEmpty || locale !== this.locale) {
       this.locale = locale

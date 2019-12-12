@@ -1,5 +1,5 @@
 <template>
-  <v-layout row wrap class="py-12 mx-auto">
+  <v-layout row wrap class="py-12 mx-auto" scrolleable>
     <v-flex class="mx-auto" lg10 md12 row wrap>
       <v-flex
         v-for="item in serviceList"
@@ -15,6 +15,12 @@
           class="mx-auto my-3 py-4"
           height="150"
           max-width="350"
+          :to="
+            localePath({
+              name: 'services-service',
+              params: { service: `service${item.id}` }
+            })
+          "
         >
           <v-row align="center" justify="center" class="mx-0">
             <v-btn fab small color="blue" class="white--text" depressed>

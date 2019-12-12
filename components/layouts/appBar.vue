@@ -13,7 +13,7 @@
           link
           nuxt
           :to="localePath(btn.to)"
-          exact
+          :exact="btn.exact"
         >
           <v-list-item-action>
             <v-icon color="grey darken-1">{{ btn.icon }}</v-icon>
@@ -82,8 +82,8 @@ export default {
         {
           sub_action: 'services',
           icon: 'mdi-face-agent',
-          to: 'services',
-          exact: true
+          to: 'services-service',
+          exact: false
         },
         { sub_action: 'tours', icon: 'mdi-walk', to: 'tours', exact: false },
         {

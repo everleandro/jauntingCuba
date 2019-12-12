@@ -1,10 +1,11 @@
 <template>
   <div>
-    <div v-for="(item, index) in list" :key="index">
+    <div v-for="(item, index) in list" id="cont-service" :key="index">
       <!--INFO AND IMG SERVICE-->
       <v-layout>
         <v-container class="mt-4 mb-0">
           <v-row
+            :id="`service${item.id}`"
             align="center"
             justify="center"
             class="d-flex mx-0"
@@ -144,6 +145,7 @@ export default {
       }
     }
   },
+
   methods: {
     switchCase(index) {
       if (this.$vuetify.breakpoint.smAndDown) return 2

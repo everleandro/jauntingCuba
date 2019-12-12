@@ -1,5 +1,5 @@
 <template>
-  <v-content :class="$vuetify.breakpoint.mdAndUp ? 'pt-0' : 'pt-12'">
+  <v-content id="start" :class="$vuetify.breakpoint.mdAndUp ? 'pt-0' : 'pt-12'">
     <!--    HEADER-->
     <v-layout
       style="height: 80vh"
@@ -62,15 +62,23 @@
 <script>
 // component
 import Services from '@/components/services/Services'
-
 // data
 import ServiceData from '@/data/services.js'
+
 export default {
   name: 'Index',
   components: { Services },
   data() {
     return {
       serviceList: []
+    }
+  },
+  computed: {
+    options() {
+      return {
+        duration: 1000,
+        easing: 'easeOutQuad'
+      }
     }
   },
   watch: {
@@ -83,6 +91,10 @@ export default {
   mounted() {
     const locale = this.$i18n.locale
     this.loadData(locale)
+    const target = `#${this.$route.params.service}`
+    setTimeout(() => {
+      this.$vuetify.goTo(target, this.options)
+    }, 500)
   },
   methods: {
     loadData(locale) {
