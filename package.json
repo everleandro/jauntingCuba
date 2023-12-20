@@ -14,14 +14,7 @@
     "heroku-postbuild": "npm run build",
     "test": "jest"
   },
-  "lint-staged": {
-    "*.{js,vue}": "eslint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
+
   "engines": {
     "node": "18.18.0",
     "npm": "9.8.1"
